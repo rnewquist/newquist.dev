@@ -8,7 +8,7 @@ class NavigatorBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.red,
+      color: Colors.white,
       height: 75,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -23,7 +23,7 @@ class NavigatorBar extends StatelessWidget {
               child: SvgPicture.asset(
                 'assets/logo.svg',
                 width: 50,
-                color: Colors.white,
+                color: Colors.black,
               ),
             ),
           ),
@@ -37,7 +37,7 @@ class NavigatorBar extends StatelessWidget {
                   onHover: (isHovering) {},
                   child: const Text(
                     'About',
-                    style: TextStyle(color: Colors.white, fontSize: 20),
+                    style: TextStyle(color: Colors.black, fontSize: 20),
                   ),
                 ),
                 const SizedBox(
@@ -48,7 +48,7 @@ class NavigatorBar extends StatelessWidget {
                   onHover: (isHovering) {},
                   child: const Text(
                     'Apps',
-                    style: TextStyle(color: Colors.white, fontSize: 20),
+                    style: TextStyle(color: Colors.black, fontSize: 20),
                   ),
                 ),
               ],
