@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:newquist_dev/util/commands.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class BottomTableSection extends StatelessWidget {
   const BottomTableSection({Key? key}) : super(key: key);
@@ -22,6 +24,43 @@ class BottomTableSection extends StatelessWidget {
             ),
             const SizedBox(
               height: 32,
+            ),
+            Wrap(
+              children: [
+                IconButton(
+                  onPressed: () {
+                    launchUrl(
+                        Uri.parse('https://github.com/rnewquist'));
+                  },
+                  icon: const Icon(
+                    FontAwesomeIcons.github,
+                    color: Colors.white,
+                  ),
+                ),
+                IconButton(
+                  onPressed: () {
+                    launchUrl(
+                        Uri.parse('https://www.linkedin.com/in/rnewquist/'));
+                  },
+                  icon: const Icon(
+                    FontAwesomeIcons.linkedin,
+                    color: Colors.white,
+                  ),
+                ),
+                IconButton(
+                  onPressed: () {
+                    launchUrl(
+                        Uri.parse('https://www.instagram.com/newquistryanmichael/'));
+                  },
+                  icon: const Icon(
+                    FontAwesomeIcons.instagram,
+                    color: Colors.white,
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 16,
             ),
             TextButton(
               onPressed: () => appProvider.section = 'privacy_policy',
