@@ -12,6 +12,7 @@ class AppProvider extends ChangeNotifier {
   }
 
   ThemeData _theme = ThemeData(
+    primaryColor: Colors.white,
     textTheme: GoogleFonts.montserratTextTheme(),
   );
   ThemeData get theme => _theme;
