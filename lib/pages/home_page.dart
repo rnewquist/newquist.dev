@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:newquist_dev/sections/about_section.dart';
 import 'package:newquist_dev/sections/bottom_tablet.dart';
+import 'package:newquist_dev/sections/product_section.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 class HomePage extends StatefulWidget {
@@ -26,7 +28,7 @@ class _HomePageState extends State<HomePage> {
         case 'about':
           index = 1;
           break;
-        case 'products':
+        case 'applications':
           index = 2;
           break;
       }
@@ -39,17 +41,12 @@ class _HomePageState extends State<HomePage> {
       itemBuilder: (context, index) {
         switch (index) {
           case 0:
-            return SizedBox(
-              height: 600,
+            return const SizedBox(
             );
           case 1:
-            return SizedBox(
-              height: 600,
-            );
+            return const AboutSection();
           case 2:
-            return SizedBox(
-              height: 600,
-            );
+            return const ProductSection();
           case 3:
             return const BottomTableSection();
           default:
