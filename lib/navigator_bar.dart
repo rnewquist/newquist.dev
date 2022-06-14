@@ -44,10 +44,10 @@ class NavigatorBar extends StatelessWidget {
                   width: 8,
                 ),
                 TextButton(
-                  onPressed: () => appProvider.section = 'products',
+                  onPressed: () => appProvider.section = 'applications',
                   onHover: (isHovering) {},
                   child: const Text(
-                    'Products',
+                    'Apps',
                     style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                 ),
