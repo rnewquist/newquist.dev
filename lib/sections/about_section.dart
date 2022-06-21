@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:newquist_dev/util/constants.dart';
-import 'package:newquist_dev/work_card.dart';
+import 'package:newquist_dev/sections/work_card.dart';
 
 class AboutSection extends StatelessWidget {
   const AboutSection({Key? key}) : super(key: key);
