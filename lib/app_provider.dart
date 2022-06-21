@@ -1,14 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 
 class AppProvider extends ChangeNotifier {
-  Future<void> initialize() async {}
+  Future<void> initialize() async {
+    await FirebaseAnalytics.instance.logEvent(
+      name: 'screen_view',
+      parameters: {
+        'firebase_screen': 'Launch',
+        'firebase_screen_class': 'Logo',
+      },
+    );
+  }
 
   String _section = '';
   String get section => _section;
   set section(String value) {
-      _section = value;
-      notifyListeners();
+    _section = value;
+    notifyListeners();
   }
 
   ThemeData _theme = ThemeData(

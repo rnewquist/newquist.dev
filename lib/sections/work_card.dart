@@ -31,13 +31,9 @@ class WorkCard extends StatelessWidget {
               Flexible(
                 flex: 1,
                 child: Center(
-                  child: Column(
-                    children: [
-                      Text(
-                        '${DateFormat("MMMM yyyy").format(startDate)} - ${endDate != null ? DateFormat("MMMM yyyy").format(endDate!) : 'Present'} ',
-                        style: header2,
-                      ),
-                    ],
+                  child: Text(
+                    '${DateFormat("MMMM yyyy").format(startDate)} - ${endDate != null ? DateFormat("MMMM yyyy").format(endDate!) : 'Present'} ',
+                    style: header2,
                   ),
                 ),
               ),
