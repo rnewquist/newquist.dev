@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:newquist_dev/main.dart';
 import 'package:newquist_dev/util/commands.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class BottomTableSection extends StatelessWidget {
   const BottomTableSection({Key? key}) : super(key: key);

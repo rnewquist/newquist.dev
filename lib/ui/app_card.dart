@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:newquist_dev/util/commands.dart';
 import 'package:newquist_dev/util/constants.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class AppCard extends StatelessWidget {
   const AppCard(
