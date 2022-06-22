@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newquist_dev/util/commands.dart';
 import 'package:newquist_dev/util/constants.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -54,31 +55,34 @@ class AppCard extends StatelessWidget {
                           'COMING SOON',
                           style: header2,
                         )
-                      : Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            if (androidURL != null)
-                              TextButton(
-                                onPressed: () {
-                                  launchUrl(Uri.parse(androidURL!));
-                                },
-                                child: const Text(
-                                  'Android',
-                                  style: header2,
+                      : FittedBox(
+                        fit: BoxFit.contain,
+                        child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              if (androidURL != null)
+                                TextButton(
+                                  onPressed: () {
+                                    appProvider.onURLPress(androidURL!);
+                                  },
+                                  child: const Text(
+                                    'Android',
+                                    style: header2,
+                                  ),
                                 ),
-                              ),
-                            if (iosURL != null)
-                              TextButton(
-                                onPressed: () {
-                                  launchUrl(Uri.parse(iosURL!));
-                                },
-                                child: const Text(
-                                  'iOS',
-                                  style: header2,
+                              if (iosURL != null)
+                                TextButton(
+                                  onPressed: () {
+                                    appProvider.onURLPress(iosURL!);
+                                  },
+                                  child: const Text(
+                                    'iOS',
+                                    style: header2,
+                                  ),
                                 ),
-                              ),
-                          ],
-                        ),
+                            ],
+                          ),
+                      ),
                 ),
               ),
             ],

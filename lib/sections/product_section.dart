@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:newquist_dev/util/constants.dart';
 
-import 'about_card.dart';
+import '../ui/app_card.dart';
 
 class ProductSection extends StatelessWidget {
   const ProductSection({Key? key}) : super(key: key);
