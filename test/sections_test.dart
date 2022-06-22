@@ -58,8 +58,9 @@ void main() {
     await initializeWidget(tester, const ProductSection());
     expect(find.text('PERSONAL APPLICATIONS'), findsOneWidget);
     expect(find.text('WORK APPLICATIONS'), findsOneWidget);
-    expect(find.byType(AppCard), findsNWidgets(7));
+    expect(find.byType(AppCard), findsNWidgets(8));
     expect(find.text('Distilled'), findsOneWidget);
+    expect(find.text('newquist.dev'), findsOneWidget);
     expect(find.text('CNET'), findsOneWidget);
     expect(find.text('TVGUIDE'), findsOneWidget);
     expect(find.text('SmartHQ'), findsOneWidget);

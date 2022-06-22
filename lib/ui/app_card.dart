@@ -8,11 +8,13 @@ class AppCard extends StatelessWidget {
       required this.name,
       this.androidURL,
       this.iosURL,
+      this.custom,
       Key? key})
       : super(key: key);
   final Widget child;
   final String? androidURL;
   final String? iosURL;
+  final Widget? custom;
   final String name;
 
   @override
@@ -50,13 +52,13 @@ class AppCard extends StatelessWidget {
               Expanded(
                 child: Center(
                   child: iosURL == null && androidURL == null
-                      ? const Text(
+                      ? custom ?? const Text(
                           'COMING SOON',
                           style: header2,
                         )
                       : FittedBox(
-                        fit: BoxFit.contain,
-                        child: Row(
+                          fit: BoxFit.contain,
+                          child: Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               if (androidURL != null)
@@ -81,7 +83,7 @@ class AppCard extends StatelessWidget {
                                 ),
                             ],
                           ),
-                      ),
+                        ),
                 ),
               ),
             ],

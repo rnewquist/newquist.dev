@@ -74,6 +74,22 @@ void main() {
 
       verify(appProviderMock.onURLPress('android')).called(1);
     });
+    testWidgets('Without iOS', (WidgetTester tester) async {
+      await initializeWidget(
+        tester,
+        AppCard(
+          child: child,
+          name: name,
+          custom: const SizedBox(key: ValueKey('custom'),),
+        ),
+      );
+      expect(find.byKey(const ValueKey('testing_container')), findsOneWidget);
+      expect(find.byType(Card), findsOneWidget);
+      expect(find.text('COMING SOON'), findsNothing);
+      expect(find.text('Android'), findsNothing);
+      expect(find.text('iOS'), findsNothing);
+      expect(find.byKey(const ValueKey('custom')), findsOneWidget);
+    });
     testWidgets('Without Android', (WidgetTester tester) async {
       await initializeWidget(
         tester,
