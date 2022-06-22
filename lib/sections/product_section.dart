@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:newquist_dev/util/commands.dart';
 import 'package:newquist_dev/util/constants.dart';
 
 import '../ui/app_card.dart';
@@ -23,6 +25,17 @@ class ProductSection extends StatelessWidget {
             AppCard(
               name: 'Distilled',
               child: SvgPicture.asset('assets/distilled.svg'),
+            ),
+            AppCard(
+              name: 'newquist.dev',
+              child: SvgPicture.asset('assets/logo.svg'),
+              custom: IconButton(
+                icon: const Icon(FontAwesomeIcons.github),
+                onPressed: () {
+                  appProvider
+                      .onURLPress('https://github.com/rnewquist/newquist.dev');
+                },
+              ),
             ),
           ],
         ),
