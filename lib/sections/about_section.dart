@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:newquist_dev/util/constants.dart';
-import 'package:newquist_dev/sections/work_card.dart';
+import 'package:newquist_dev/ui/work_card.dart';
 
 class AboutSection extends StatelessWidget {
   const AboutSection({Key? key}) : super(key: key);
@@ -11,6 +11,7 @@ class AboutSection extends StatelessWidget {
     return Column(
       children: [
         Padding(
+          key: const ValueKey('profile_image'),
           padding: const EdgeInsets.only(top: 16.0),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(250),
@@ -36,6 +37,7 @@ class AboutSection extends StatelessWidget {
           'Obtained a Masters in Computer Sciences from University of Louisville\n'
           'Obtained Bachelors in Engineering Mechanics from University of Illinois Urbana-Champaign',
           style: header2,
+          key:  ValueKey('About_section_info'),
           textAlign: TextAlign.center,
         ),
         const Padding(
@@ -46,6 +48,7 @@ class AboutSection extends StatelessWidget {
           ),
         ),
         WorkCard(
+          key: const ValueKey('ge_work_card'),
           child: Image.asset('assets/ge.jpeg'),
           startDate: DateTime(2019, 4),
         ),
@@ -53,6 +56,7 @@ class AboutSection extends StatelessWidget {
           height: 16,
         ),
         WorkCard(
+          key: const ValueKey('cbs_work_card'),
           child: SvgPicture.asset('assets/cbs.svg'),
           endDate: DateTime(2019, 4),
           startDate: DateTime(2017, 1),
@@ -61,6 +65,7 @@ class AboutSection extends StatelessWidget {
           height: 16,
         ),
         WorkCard(
+          key: const ValueKey('vitronic_work_card'),
           child: Image.asset('assets/vitronic.jpeg'),
           endDate: DateTime(2016, 12),
           startDate: DateTime(2016, 7),
@@ -69,6 +74,7 @@ class AboutSection extends StatelessWidget {
           height: 16,
         ),
         WorkCard(
+          key: const ValueKey('hh_work_card'),
           child: Image.asset('assets/horizonhobby.jpeg'),
           endDate: DateTime(2016, 4),
           startDate: DateTime(2015, 6),

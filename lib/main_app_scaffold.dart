@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:newquist_dev/sections/navigator_bar.dart';
+import 'package:newquist_dev/ui/navigator_bar.dart';
 import 'package:newquist_dev/util/background.dart';
 
 /// Wraps the entire app, providing it with various helper classes and wrapper widgets.

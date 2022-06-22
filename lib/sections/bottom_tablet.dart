@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:newquist_dev/util/commands.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class BottomTableSection extends StatelessWidget {
   const BottomTableSection({Key? key}) : super(key: key);
@@ -10,7 +9,7 @@ class BottomTableSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top:32.0),
+      padding: const EdgeInsets.only(top: 32.0),
       child: Container(
         height: 300,
         color: Colors.white,
@@ -30,9 +29,10 @@ class BottomTableSection extends StatelessWidget {
               Wrap(
                 children: [
                   IconButton(
+                    key: const ValueKey('github_link'),
                     onPressed: () {
-                      launchUrl(
-                          Uri.parse('https://github.com/rnewquist'));
+                      appProvider.onURLPress(
+                          'https://github.com/rnewquist');
                     },
                     icon: const Icon(
                       FontAwesomeIcons.github,
@@ -40,9 +40,10 @@ class BottomTableSection extends StatelessWidget {
                     ),
                   ),
                   IconButton(
+                    key: const ValueKey('linkedin_link'),
                     onPressed: () {
-                      launchUrl(
-                          Uri.parse('https://www.linkedin.com/in/rnewquist/'));
+                      appProvider.onURLPress(
+                          'https://www.linkedin.com/in/rnewquist/');
                     },
                     icon: const Icon(
                       FontAwesomeIcons.linkedin,
@@ -50,9 +51,10 @@ class BottomTableSection extends StatelessWidget {
                     ),
                   ),
                   IconButton(
+                    key: const ValueKey('instagram_link'),
                     onPressed: () {
-                      launchUrl(
-                          Uri.parse('https://www.instagram.com/newquistryanmichael/'));
+                      appProvider.onURLPress(
+                          'https://www.instagram.com/newquistryanmichael/');
                     },
                     icon: const Icon(
                       FontAwesomeIcons.instagram,

@@ -10,6 +10,9 @@ class WorkCard extends StatelessWidget {
   final DateTime startDate;
   final DateTime? endDate;
 
+  String get date =>
+      '${DateFormat("MMMM yyyy").format(startDate)} - ${endDate != null ? DateFormat("MMMM yyyy").format(endDate!) : 'Present'}';
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -32,7 +35,7 @@ class WorkCard extends StatelessWidget {
                 flex: 1,
                 child: Center(
                   child: Text(
-                    '${DateFormat("MMMM yyyy").format(startDate)} - ${endDate != null ? DateFormat("MMMM yyyy").format(endDate!) : 'Present'} ',
+                    date,
                     style: header2,
                   ),
                 ),
