@@ -1,16 +1,9 @@
-# newquist_dev
+# newquist.dev Website
 
-A new Flutter project.
+A personal website to show case projects and code.
 
-## Getting Started
+## Description
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This project was written in Flutter in combination with GitHub Actions and Firebase.
+When a pull request is made, the code will run through all unit tests and create a preview of the website.
+If a pull request is merged into the "main" branch, the code will then be hosted to newquist.dev
